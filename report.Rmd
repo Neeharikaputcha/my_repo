@@ -1,0 +1,162 @@
+---
+title: "HW 1, CS 625, Spring 2023"
+author: "Sri lakshmi durga neeharika putcha"
+date: Jan 19, 2023
+output: rmarkdown::github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Git, GitHub
+
+1. *What is your GitHub username?*
+neeharikaputcha
+
+2. *What is the URL of your remote GitHub repo (created through Mr. Kennedy's exercises)?*
+https://github.com/Neeharikaputcha/my_repo.git
+## R
+
+The command below will load the tidyverse package.  If you have installed R, RStudio, and the tidyverse package, it should display a list of loaded packages and their versions.
+```{r}
+library(tidyverse)
+```
+
+## R Markdown 
+
+1. *Create a bulleted list with at least 3 items*
+
+2. *Write a single paragraph that demonstrates the use of italics, bold, bold italics, code, and includes a link. The paragraph does not have to make sense.*
+On January 27, 1880, *Thomas Edison* received the historic patent embodying the principles of his **incandescent lamp** that paved the way for the universal domestic use of ***electric light***.
+
+3. *Create a level 3 heading*
+ ### I love coding
+## R 
+
+#### Data Visualization Exercises
+
+1. (Q2) *How many rows are in mpg? How many columns?*
+```{r}
+ggplot2::mpg
+```
+
+1. (Q4) *Make a scatterplot of hwy vs cyl.*
+```{r}
+
+library(tidyverse)
+ggplot(data = mpg) + geom_point(mapping = aes(x = cyl, y = hwy))
+```
+
+
+#### Workflow: basics Exercises
+
+1. (Q2) *Tweak each of the following R commands so that they run correctly (`library(tidyverse)` is correct):*
+
+```r
+library(tidyverse)
+ggplot(dota = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+fliter(mpg, cyl = 8)
+
+filter(diamond, carat > 3)
+```
+
+```{r}
+
+library(tidyverse)
+ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy))
+filter(mpg, cyl == 8)
+filter(diamonds, carat > 3)
+```
+
+## Google Colab
+
+1. *What are the URLs of your Google Colab notebooks (both Python and R)?*
+
+https://colab.research.google.com/drive/1PUl1iuMyCr3voVdmF1gdof2qcPuE832S?usp=sharing
+
+
+## Tableau
+
+*Insert your the image of your final bar chart here*
+
+![Tableau](C:/Users/putch/OneDrive/Desktop/Tableau.jfif)
+
+
+
+1. *What conclusions can you draw from the chart?*
+
+The chart shows the difference of sum of sales for each category vs region.
+
+## Observable and Vega-Lite
+
+### A Taste of Observable
+
+1. *In the "New York City weather forecast" section, try replacing `Forecast: detailedForecast` with `Forecast: shortForecast`. Then press the blue play button  or use Shift-Return to run your change. What happens?*
+
+Details about forecast have been changed and the explanation about the forecast becomes short.
+
+1. *Under the scatterplot of temperature vs. name, try replacing `markCircle()` with `markSquare()`. Then press the blue play button  or use Shift-Return to run your change. What happens? How about `markPoint()`?*
+
+Shape of the dots changed to square in the plot when the markCircle changed to markSquare()
+
+1. *Under "Pick a location, see the weather forecast", pick a location on the map.  Where was the point you picked near?*
+
+Array values changes as we observe the change in latitude changing.
+
+1. *The last visualization on this page is a "fancy" weather chart embedded from another notebook.  Click on the 3 dots next to that chart and choose 'Download PNG'.  Insert the PNG into your report.*
+
+![viz](C:/Users/putch/OneDrive/Desktop/viz.png)
+
+### Charting with Vega-Lite
+
+`markCircle()`
+
+1. *Pass an option of `{ size: 200 }` to `markCircle()`.*
+
+![2](C:/Users/putch/OneDrive/Desktop/2.png)
+
+1. *Try `markSquare` instead of `markCircle`.*
+
+
+1. *Try `markPoint({ shape: 'diamond' })`.*
+
+![3](C:/Users/putch/OneDrive/Desktop/3.png)
+
+`vl.x().fieldQ("Horsepower")`, ...
+
+1. *Change `Horsepower` to `Acceleration`*
+
+![1](C:/Users/putch/OneDrive/Desktop/1.png)
+
+1. *Swap what fields are displayed on the x- and y-axis*
+
+![4](C:/Users/putch/OneDrive/Desktop/4.png)
+
+
+
+1. *Change `Name` to `Origin`.*
+
+When the name was changed to origin map showed country name.
+
+Another example, `count()`
+
+1. *Remove the `vl.y().fieldN("Origin")` line.*
+
+The y-axis disappears and the data merges intlo single line
+1. *Replace `count()` with `average("Miles_per_Gallon")`.*
+
+The count() when replaced with average("Miles_per_Gallon")showed the average of the country.
+
+## References
+
+*Every report must list the references that you consulted while completing the assignment. If you consulted a webpage, you must include the URL.*
+
+Reference 1, https://r4ds.had.co.nz/workflow-basics.html#practice
+* Reference 2, https://colab.research.google.com/drive/165dTuQy5P7cgG8QqZMuLWP02LD9fLpLJ#scrollTo=qJAKN6380cJc
+* Reference 3, https://observablehq.com/@tomb/a-taste-of-observable
+* Reference 4, https://www.tableau.com/academic/students
+* Reference 5, https://r4ds.had.co.nz/workflow-basics.html#practice
+* Reference 6, https://colab.research.google.com/drive/1PUl1iuMyCr3voVdmF1gdof2qcPuE832S?usp=sharing

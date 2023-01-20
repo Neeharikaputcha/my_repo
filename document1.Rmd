@@ -1,0 +1,8 @@
+* LIST OF ANIMALS
+* MONKEY
+* TIGER
+* LION
+
+On January 27, 1880, *Thomas Edison* received the historic patent embodying the principles of his **incandescent lamp** that paved the way for the universal domestic use of ***electric light***.
+
+### I love coding
